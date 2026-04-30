@@ -9,11 +9,11 @@
 
 int main(void)
 {
-    // TODO: Open "phonebook.csv" in append mode "a"
-    FILE *file = fopen(/* ??? */, /* ??? */);
+    // Open "phonebook.csv" in append mode
+    FILE *file = fopen("phonebook.csv", "a");
 
-    // TODO: Check if fopen returned NULL and return 1 if so
-    if (/* ??? */)
+    // Check if fopen returned NULL and return 1 if so
+    if (file == NULL)
     {
         return 1;
     }
@@ -22,11 +22,11 @@ int main(void)
     char *name = get_string("Name: ");
     char *number = get_string("Number: ");
 
-    // TODO: Write name and number to the file as "name,number\n"
-    fprintf(file, /* ??? */, name, number);
+    // Write name and number to the file as "name,number\n"
+    fprintf(file, "%s,%s\n", name, number);
 
-    // TODO: Close the file
-    /* ??? */
+    // Close the file
+    fclose(file);
 
     return 0;
 }
