@@ -1,6 +1,6 @@
-// Stores and prints an integer's address
-// A pointer is a variable that holds a memory address.
-// int *p means "p is a pointer to an int".
+// Prints an integer's address
+// The & operator gives you the memory address of a variable.
+// %p is the format specifier for printing addresses (pointers).
 
 #include <stdio.h>
 
@@ -8,9 +8,6 @@ int main(void)
 {
     int n = 50;
 
-    // TODO: Declare a pointer p that stores the address of n
-    int *p = /* ??? */;
-
-    // TODO: Print the address stored in p using %p
-    printf("%p\n", /* ??? */);
+    // Print the address of n using %p and the & operator
+    printf("%p\n", (void *)&n);
 }
