@@ -8,6 +8,6 @@ int main(void)
 {
     int n = 50;
 
-    // TODO: Print the address of n using %p and the & operator
-    printf("%p\n", /* ??? */);
+    // Print the address of n using %p and the & operator
+    printf("%p\n", (void *)&n);
 }
