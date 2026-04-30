@@ -15,18 +15,17 @@ int main(void)
     // Get a string
     char *s = get_string("s: ");
 
-    // TODO: Allocate memory for t — same length as s, plus 1 for the '\0'
-    char *t = malloc(/* ??? */);
+    // Allocate memory for t — same length as s, plus 1 for the '\0'
+    char *t = malloc(strlen(s) + 1);
 
-    // TODO: Copy each character from s into t, including the '\0'
-    // Hint: loop from i = 0 to i <= strlen(s)
+    // Copy each character from s into t, including the '\0'
     for (int i = 0; i <= strlen(s); i++)
     {
-        t[i] = /* ??? */;
+        t[i] = s[i];
     }
 
-    // TODO: Capitalize the first letter of t only
-    t[0] = toupper(/* ??? */);
+    // Capitalize the first letter of t only
+    t[0] = toupper(t[0]);
 
     // Print both — now only t should be capitalized
     printf("s: %s\n", s);
